@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <title>Vue.js</title>
+</head>
+<body>
+    <div id="app">
+        <!-- Condicionales IF/Else
+        Con v-if puedo pasar la condición a evaluarse, con v-else la acción a tomar en caso de ser false -->
+       <div v-if="value > 5">Value es mayor a 5</div>
+       <div v-else-if="value == 5">Value es igual a 5</div>
+       <div v-else>Value es menor a 5</div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
