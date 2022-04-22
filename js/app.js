@@ -8,7 +8,9 @@ var app = new Vue({
         people: ['María', 'Matías', 'Titán'],
         content_html: '<h1>Hola Mundo!</h1>',
         src: 'https://www.holycarstv.com/wp-content/uploads/2020/04/nissan-skyline-1024x576.jpg',
-        text: 'Descripción de nuestra imágen'
+        text: 'Descripción de nuestra imágen',
+        numero: 14,
+        v_model: 'Hola v-model'
     },
     computed: {
         reversedMessage: function(){
@@ -18,6 +20,12 @@ var app = new Vue({
     methods: {
         calculateSum(value1, value2){
             return value1 + value2;
+        },
+        incrementar(){
+            this.numero++;
+        },
+        decrementar(){
+            this.numero--;
         }
     }
 });
