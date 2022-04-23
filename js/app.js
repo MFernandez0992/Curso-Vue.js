@@ -10,7 +10,8 @@ var app = new Vue({
         src: 'https://www.holycarstv.com/wp-content/uploads/2020/04/nissan-skyline-1024x576.jpg',
         text: 'Descripción de nuestra imágen',
         numero: 14,
-        v_model: 'Hola v-model'
+        v_model: 'Hola v-model',
+        p_error: false
     },
     computed: {
         reversedMessage: function(){
@@ -26,6 +27,12 @@ var app = new Vue({
         },
         decrementar(){
             this.numero--;
+        }
+    },
+    /* Cada vez que la variable numero reciba un cambio esta función watch se va a disparar */
+    watch: {
+        numero: function(val){
+            console.log('watch: ' + val)
         }
     }
 });
