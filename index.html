@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router@4"></script>
+
     <title>Vue.js</title>
 
     <style>
@@ -20,6 +22,12 @@
 </head>
 <body>
     <div id="app">
+
+        <router-link to="/home">Go to Home</router-link>
+        <router-link to="/about">Go to About</router-link>
+
+        <router-view></router-view>
+
         <h1 v-bind:class="{error: p_error, no_error: !p_error}">Esto es un texto</h1>
         <h1 v-if="p_error">Esto es un texto con v-if</h1>
         <h1 v-show="p_error">Esto es un texto con v-show</h1>
